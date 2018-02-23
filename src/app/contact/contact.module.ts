@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
 import { ContactListComponent } from './components/contact-list/contact-list.component';
+
+const routes: Routes = [
+  { path: 'list', component: ContactListComponent },
+  { path: '**', redirectTo: 'list'}
+];
+
 
 @NgModule({
   imports: [
-    CommonModule
+    RouterModule.forChild(routes)
   ],
   declarations: [ContactListComponent]
 })
