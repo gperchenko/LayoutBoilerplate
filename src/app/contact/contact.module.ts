@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { MaterialModule } from '../shared/material.module';
+
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 
 const routes: Routes = [
@@ -11,7 +13,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialModule
   ],
   declarations: [ContactListComponent]
 })

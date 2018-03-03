@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 
 import  { TitleService } from '../../../shared/services/title.service';
 
@@ -8,6 +8,8 @@ import  { TitleService } from '../../../shared/services/title.service';
   styleUrls: ['./title.component.scss']
 })
 export class TitleComponent implements OnInit {
+
+  @Output() toggleSidenav = new EventEmitter<void>();
 
   constructor(
     public titleService: TitleService
